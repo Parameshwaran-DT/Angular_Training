@@ -1,19 +1,15 @@
-body {
+.bg-img {
     background-image: url("https://images.unsplash.com/photo-1508780709619-79562169bc64?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTd8fHJlcG9ydHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=500&q=60");
-    background-size: cover;
+    background-size:cover;
 }
 .border-form{
     border: 4px solid white;
     padding: 40px 0;
 }
  
-.logContainer{
-    padding: 250px 0; 
-    text-align: center;
-}
 .regContainer{
     padding: 200px 0; 
-    text-align: center;
+    text-align: center;   
 }
 
 .bg{
