@@ -6,7 +6,7 @@ import { RegisterComponent } from './register/register.component';
 import { StudentComponent } from './student/student.component';
 
 const routes: Routes = [
-  {path:'', component:StudentComponent},
+  {path:'', component:HomeComponent},
   {path:'home', component:HomeComponent},
   {path:'register', component:RegisterComponent},
   {path:'login', component:LoginComponent}
