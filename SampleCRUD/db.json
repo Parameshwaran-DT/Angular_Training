@@ -1,0 +1,19 @@
+{
+  "employee": [
+    {
+      "id": 101,
+      "empName": "Paramesh",
+      "designation": "JavaDeveloper"
+    },
+    {
+      "id": 102,
+      "empName": "Vel",
+      "designation": "Backend Developer"
+    },
+    {
+      "id": 103,
+      "empName": "Mani",
+      "designation": "React Developer"
+    }
+  ]
+}
