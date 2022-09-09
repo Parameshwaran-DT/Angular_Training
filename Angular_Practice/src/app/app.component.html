@@ -1,0 +1,139 @@
+<!-- <h1 class="text-center">{{ title }}</h1>
+
+<div class="container panel panel-primary">
+  <div class="panel-heading">
+    {{ title }}
+  </div>
+
+  <div class="panel-body mt-3">
+    <div class="table-responsive">
+      <table class="table">
+        <thead class="bg-dark" style="color:white ;">
+          <tr>
+            <th>Title</th>
+            <th>Director</th>
+            <th>Cast</th>
+            <th>Release Date</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let movie of movies">
+            <td>{{ movie.title }}</td>
+            <td>{{ movie.director }}</td>
+            <td>{{ movie.cast }}</td>
+            <td>{{ movie.releaseDate }}</td>
+          </tr>
+        </tbody>
+        <a href="https://www.tektutorialshub.com/angular/angular-ngfor-directive/">Angular ngFor</a>
+      </table>
+    </div>
+  </div>
+</div><br><br> -->
+
+
+<div class="container bg-dark">
+  <div class="card">
+    <div class='card-header'>
+      ngSwitch Example
+    </div>
+    <div class="card-body">
+      <label for="ipstring">Input string:</label>
+      <input type='text' id="ipstring" [(ngModel)]="num" />
+      <div [ngSwitch]="num">
+        <div *ngSwitchCase="1">One</div>
+        <div *ngSwitchCase="2">Two</div>
+        <div *ngSwitchCase="3">Three</div>
+        <div *ngSwitchCase="4">Four</div>
+        <div *ngSwitchCase="5">Five</div>
+        <div *ngSwitchDefault>This is Default</div>
+      </div>
+    </div>
+  </div>
+</div><br><br>
+
+<h1>Simple example of ngIf </h1>
+
+
+<div class="row">
+  Show <input type="checkbox" [(ngModel)]="showMe" />
+</div>
+
+<h1>ngIf </h1>
+
+<p *ngIf="showMe">
+  ShowMe is checked
+</p>
+<p *ngIf="!showMe">
+  ShowMe is unchecked
+</p>
+
+<h1>ngIf Else</h1>
+
+<p *ngIf="showMe; else elseBlock1">
+  ShowMe is checked
+</p>
+
+<ng-template #elseBlock1>
+  <p>ShowMe is unchecked Using elseBlock</p>
+</ng-template>
+
+<h1>ngIf then else</h1>
+
+<p *ngIf="showMe; then thenBlock2 else elseBlock2">
+  This is not rendered
+</p>
+
+<ng-template #thenBlock2>
+  <p>ShowMe is checked Using thenblock</p>
+</ng-template>
+
+<ng-template #elseBlock2>
+  <p>ShowMe is unchecked Using elseBlock</p>
+</ng-template>
+
+<h1>using hidden </h1>
+
+<p [hidden]="showMe">
+  content to render, when the condition is true using hidden property binding
+</p>
+
+<p [hidden]="!showMe">
+  content to render, when the condition is false. using hidden property binding
+</p>
+
+Show <input type="checkbox" [(ngModel)]="showMe" />
+
+<div *ngIf="showMe">
+  ShowMe is checked
+</div>
+
+<div [ngClass]="'red size'"> Red Text with Size 20px </div>
+
+<div class="row">
+  <div ngClass='red size'>Red Text with Size 20px </div>
+</div>
+
+<some-element [ngStyle]="{'font-size': '20px', 'color':'green'}">Set Font size to 20px</some-element><br><br>
+
+
+<input [(ngModel)]="color" />
+<div [ngStyle]="{'color': color}">Change my color</div>
+<div [ngStyle]="{'background-color':status == 'error' ? 'red' : 'blue' }">Hai</div>
+
+
+
+<div class="container">
+  <h1> {{ngTryTitle}} </h1>
+  <ul>
+    <li *ngFor="let movie of movies; let i=index;trackBy: trackByFn;">
+      {{i}}. {{ movie.title }} - {{movie.director}} <button (click)="remove(i)">remove</button>
+    </li>
+  </ul>
+
+  <button (click)="Refresh()">Refresh</button><br><br>
+  <label for="title">Title :</label>
+  <input type="text" [(ngModel)]="mTitle"><br><br>
+  <label for="director">Director:</label>
+  <input type="text" [(ngModel)]="mDirector"><br>
+  <button (click)="addMovie()">Add</button>
+</div>
