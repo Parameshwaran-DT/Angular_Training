@@ -1,0 +1,7 @@
+<h2>Life Cycle Hook</h2>
+<button (click)="toggle()">Hide/Show Child </button>
+<app-child *ngIf="displayChild"></app-child>
+
+<br>
+<button type="button"><a (click)="changeFromParent()">Change from parent</a></button><br/>
+<app-child [parentData]=data></app-child>
