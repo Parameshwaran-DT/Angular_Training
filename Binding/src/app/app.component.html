@@ -1,0 +1,17 @@
+<h3>Display the content without one way Data Binding</h3>
+<hr />
+<h3 [textContent]="title"></h3>
+<input [(ngModel)]="data" type="text">
+<hr />
+<h3>You have working on {{data}}</h3><br>
+
+<h2>Two-way Binding Example</h2>    
+   <input [(ngModel)]="fullName" /> <br/><br/>    
+<p> {{fullName}} </p>  
+
+<app-item-detail [item]="currentItem" [modelName]="model" [inch]="inch"></app-item-detail>
+
+<app-item-output (newItemEvent)="addItem($event)"></app-item-output>
+<ul>
+  <li *ngFor="let item of items">{{item}}</li>
+</ul>
