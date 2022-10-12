@@ -1,0 +1,11 @@
+<div class="container text-center">
+    <h1>Form Data using Http client</h1>
+    <form [formGroup]="uploadForm" (ngSubmit)="onSubmit()">
+        <div>
+            <input type="file" name="profile" (change)="onFileSelect($event)" />
+        </div>
+        <div>
+            <button type="submit">Upload</button>
+        </div>
+    </form>
+</div>

@@ -33,9 +33,6 @@ export class AppComponent implements OnInit {
     // });
     // subject_test.next("A");
     // subject_test.next("B");
-
     
   }
-
-
 }
