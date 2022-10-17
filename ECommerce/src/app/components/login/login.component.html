@@ -1,0 +1,18 @@
+<div class="container-fluid logContainer bg-img">
+    <div class="row">
+        <div class="col-lg-4"></div>
+        <div class="col-lg-4 text-dark-50 bg border-form">
+            <form [formGroup]="loginForm">
+                <h1 class="h1">Login Form</h1><br>
+                <label for="username">UserName :</label>
+                <input type="text" id="username" placeholder="Enter User Name" formControlName="username"><br><br>
+                <label for="pwd" >Password :</label>
+                <input type="password" id="pwd" placeholder="Enter Password" formControlName="password"><br><br>
+                <p class="passwordLabel">Use more than 6 characters with the mix of letters & numbers</p>
+                <button id="login" class="btn-secondary" (click)="submit(loginForm)">Login</button>
+                <p>Don't have an account <a href="register.html" class="btn btn-danger">SignUp</a></p>
+            </form>
+        </div>
+        <div class="col-lg-4"></div>
+    </div>
+</div>
