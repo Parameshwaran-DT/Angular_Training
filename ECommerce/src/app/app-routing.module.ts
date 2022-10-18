@@ -5,9 +5,9 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
-  { path: 'observable', component: ObservableComponent},
-  { path: 'login', component: LoginComponent },
-  { path: 'user', component: UserComponent }
+  // { path: 'observable', component: ObservableComponent},
+  // { path: 'login', component: LoginComponent },
+  // { path: 'user', component: UserComponent }
 ];
 
 @NgModule({
