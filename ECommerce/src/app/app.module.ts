@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -10,19 +10,26 @@ import { ObservableComponent } from './components/observable/observable.componen
 import { HTTP_INTERCEPTORS } from '@angular/common/http';
 import { CustomInterceptor, LoggingInterceptor } from './interceptor/custom.interceptor';
 import { HttpClientModule } from '@angular/common/http';
+import { SignupComponent } from './components/signup/signup.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { AngularMaterialModule } from './angular-material.module';
+
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     UserComponent,
-    ObservableComponent
+    ObservableComponent,
+    SignupComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    AngularMaterialModule
   ],
   providers: [
     [{
@@ -37,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     },
     ]
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule { }
