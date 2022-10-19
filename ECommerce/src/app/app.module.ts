@@ -12,7 +12,8 @@ import { CustomInterceptor, LoggingInterceptor } from './interceptor/custom.inte
 import { HttpClientModule } from '@angular/common/http';
 import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AngularMaterialModule } from './angular-material.module';
+import { MultithemeComponent } from './components/multitheme/multitheme.component';
+import { ThemeService } from './shared/service/theme.service';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { AngularMaterialModule } from './angular-material.module';
     LoginComponent,
     UserComponent,
     ObservableComponent,
-    SignupComponent
+    SignupComponent,
+    MultithemeComponent
   ],
   imports: [
     BrowserModule,
@@ -28,8 +30,7 @@ import { AngularMaterialModule } from './angular-material.module';
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    AngularMaterialModule
+    BrowserAnimationsModule
   ],
   providers: [
     [{
@@ -42,6 +43,7 @@ import { AngularMaterialModule } from './angular-material.module';
       useClass: CustomInterceptor,
       multi: true
     },
+    ThemeService
     ]
   ],
   bootstrap: [AppComponent],
