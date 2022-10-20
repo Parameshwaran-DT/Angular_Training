@@ -7,8 +7,10 @@ import { AppService } from './app.service';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  title = 'ECommerce';
   users:any;
+  title: string = "Custom Directives in Angular";
+  show=true;
+
   constructor(private appService: AppService){}
 
   ngOnInit() {

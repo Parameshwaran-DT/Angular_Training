@@ -14,7 +14,8 @@ import { SignupComponent } from './components/signup/signup.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MultithemeComponent } from './components/multitheme/multitheme.component';
 import { ThemeService } from './shared/service/theme.service';
-
+import { MyHighlightDirective } from './directive/my-highlight.directive';
+import { TtIfDirective } from './directive/tt-if.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +23,9 @@ import { ThemeService } from './shared/service/theme.service';
     UserComponent,
     ObservableComponent,
     SignupComponent,
-    MultithemeComponent
+    MultithemeComponent,
+    MyHighlightDirective,
+    TtIfDirective
   ],
   imports: [
     BrowserModule,
