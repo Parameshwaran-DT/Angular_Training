@@ -27,7 +27,7 @@
     </table>
 </div> -->
 
-<h1 class="text-center"> {{title}} </h1>
+<!-- <h1 class="text-center"> {{title}} </h1>
 
  <app-multitheme></app-multitheme><br>
 <div class="para float-left text-center" myHighlight
@@ -35,7 +35,7 @@
 	[foregroundColor]="'white'"
 	[hoverBackgroundColor]="'yellow'"
 	[hoverForegroundColor]="'red'">Some text to be highlighted !
-</div>
+</div> -->
 <!-- Show Me
 <input type="checkbox" [(ngModel)]="show">
  
@@ -47,6 +47,14 @@
   Using the ngIf directive
 </div> -->
  
+<h1>
+  {{title}}
+</h1>
 
+<button type="button" routerLink="/customers">Customers</button>
+<button type="button" routerLink="/orders">Orders</button>
+<button type="button" routerLink="">Home</button>
+
+<router-outlet></router-outlet>
 
 
