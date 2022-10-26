@@ -21,17 +21,20 @@ export class TodoListComponent implements OnInit {
   }
 
   onClickEditTodoDetail(id: number) {
-    console.log(id);
+    console.log("Id:", id);
     this.router.navigate(['/todo-detail'], { queryParams: { id: id } });
   }
 
   onClickAddTodo() {
+    console.log("Inside AddTOdo");
     this.router.navigate(['/todo-detail']);
   }
 
   onClickTodoDelete(id: number) {
-    this.todoService.deleteTodoDetail(id);
-    this.loadAllTodoList();
+    if (confirm("Do you want discard all changes? ")) {
+      this.todoService.deleteTodoDetail(id);
+      this.loadAllTodoList();
+    }
   }
 
 }

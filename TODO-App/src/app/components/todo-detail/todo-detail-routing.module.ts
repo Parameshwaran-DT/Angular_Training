@@ -4,7 +4,6 @@ import { TodoDetailComponent } from './todo-detail.component';
 
 const routes: Routes = [
   {path: '', component: TodoDetailComponent}
-
 ];
 
 @NgModule({

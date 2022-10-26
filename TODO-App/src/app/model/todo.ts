@@ -1,4 +1,7 @@
 export class Todo {
+    subscribe(arg0: (res: any) => void) {
+      throw new Error('Method not implemented.');
+    }
     constructor(
         public id: number,
         public title: string,
