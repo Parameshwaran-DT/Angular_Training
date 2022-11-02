@@ -1,4 +1,3 @@
-
 <!-- <mat-toolbar color="primary" class="app-header">
     <div><a href="https://www.positronx.io" target="_blank" class="positronx">PositronX.io</a></div>
     <span class="nav-tool-items">
@@ -7,7 +6,7 @@
     </span>
   </mat-toolbar>
   <router-outlet></router-outlet> -->
-  
+
 <!-- <div class="container">
     <table class="table table-bordered">
         <thead>
@@ -46,15 +45,24 @@
 <div *ngIf="show">
   Using the ngIf directive
 </div> -->
- 
-<h1>
+
+<!-- <h1>
   {{title}}
 </h1>
 
 <button type="button" routerLink="/customers">Customers</button>
 <button type="button" routerLink="/orders">Orders</button>
-<button type="button" routerLink="">Home</button>
+<button type="button" routerLink="">Home</button>-->
+
+
+<div>
+  <select [(ngModel)]="myColor">
+    <option value='' selected> Select Color </option>
+    <option *ngFor="let color of colors" [value]="color">
+      {{color}}
+    </option>
+  </select>
+  <p [dynamicColor]="myColor" defaultValue="red"> dynamicColor Custom Directive Demo</p>
+</div>
 
 <router-outlet></router-outlet>
-
-

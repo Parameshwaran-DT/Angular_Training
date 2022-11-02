@@ -10,6 +10,9 @@ export class AppComponent implements OnInit {
   users:any;
   title: string = "Custom Directives in Angular";
   show=true;
+ 
+  colors = ['CYAN', 'GREEN', 'YELLOW'];  
+  myColor = ''; 
 
   constructor(private appService: AppService){}
 

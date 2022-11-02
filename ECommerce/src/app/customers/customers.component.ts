@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ThemeService } from '../shared/service/theme.service';
 
 @Component({
   selector: 'app-customers',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CustomersComponent implements OnInit {
 
-  constructor() { }
+  constructor(private themeService: ThemeService) { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.defaultTheme();
+  }
+
+  defaultTheme() {
+    this.themeService.setDefaultTheme();
+  }
+
+  theme1() {
+    this.themeService.setLightTheme();
+  }
+
+  theme2() {
+    this.themeService.setDarkTheme();
   }
 
 }

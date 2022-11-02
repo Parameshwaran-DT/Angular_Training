@@ -16,6 +16,7 @@ import { MultithemeComponent } from './components/multitheme/multitheme.componen
 import { ThemeService } from './shared/service/theme.service';
 import { MyHighlightDirective } from './directive/my-highlight.directive';
 import { TtIfDirective } from './directive/tt-if.directive';
+import { DynamicColorDirective } from './directive/dynamic-color.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { TtIfDirective } from './directive/tt-if.directive';
     SignupComponent,
     MultithemeComponent,
     MyHighlightDirective,
-    TtIfDirective
+    TtIfDirective,
+    DynamicColorDirective
   ],
   imports: [
     BrowserModule,

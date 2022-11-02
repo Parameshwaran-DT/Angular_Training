@@ -7,11 +7,11 @@ import { SignupComponent } from './components/signup/signup.component';
 import { UserComponent } from './components/user/user.component';
 
 const routes: Routes = [
-  // { path: 'observable', component: ObservableComponent },
-  // { path: 'login', component: LoginComponent },
-  // { path: 'signup', component: SignupComponent },
-  // { path: 'user', component: UserComponent },
-  // { path: 'multitheme', component: MultithemeComponent },
+  { path: 'observable', component: ObservableComponent },
+  { path: 'login', component: LoginComponent },
+  { path: 'signup', component: SignupComponent },
+  { path: 'user', component: UserComponent },
+  { path: 'multitheme', component: MultithemeComponent },
   { path: 'customers', loadChildren: () => import('./customers/customers.module').then(m => m.CustomersModule) },
   { path: 'orders', loadChildren: () => import('./orders/orders.module').then(m => m.OrdersModule) },
   {path: '', redirectTo: '', pathMatch: 'full'}

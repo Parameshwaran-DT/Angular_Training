@@ -3,11 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { CustomersRoutingModule } from './customers-routing.module';
 import { CustomersComponent } from './customers.component';
-
-
+import { DynamicColorDirective } from '../directive/dynamic-color.directive';
 @NgModule({
   declarations: [
-    CustomersComponent
+    CustomersComponent,
+    DynamicColorDirective
   ],
   imports: [
     CommonModule,
