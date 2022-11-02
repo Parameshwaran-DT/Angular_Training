@@ -3,4 +3,5 @@ export interface CounterState{
 }
 export const initialState={
     counter:4
+    
 }
