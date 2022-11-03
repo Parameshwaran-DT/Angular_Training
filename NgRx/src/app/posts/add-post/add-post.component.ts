@@ -42,6 +42,7 @@ export class AddPostComponent implements OnInit {
     };
 
     this.store.dispatch(addPost({ post }));
+    this.postForm.reset();
   }
 
   showDescriptionErrors() {
