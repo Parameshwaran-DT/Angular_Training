@@ -19,9 +19,9 @@ export class EditPostComponent implements OnInit, OnDestroy {
   postForm!: FormGroup;
   postSubscription!: Subscription;
   constructor(private route: ActivatedRoute,
-     private store: Store<AppState>,
-     private router : Router
-     ) { }
+    private store: Store<AppState>,
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
     this.route.paramMap.subscribe((params) => {
@@ -67,6 +67,20 @@ export class EditPostComponent implements OnInit, OnDestroy {
     }
     this.store.dispatch(updatePost({ post }));
     this.router.navigate(['post']);
+  }
+
+  showDescriptionErrors() {
+    const descriptionForm = this.postForm.get('description');
+    if (descriptionForm?.touched && !descriptionForm.valid) {
+      if (descriptionForm?.errors?.['required']) {
+        return 'Description is required';
+      }
+
+      if (descriptionForm?.errors?.['minlength']) {
+        return 'Description should be of minimum 10 characters length';
+      }
+    }
+    return null;
   }
 
 }
